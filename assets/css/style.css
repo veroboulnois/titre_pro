@@ -1,0 +1,13 @@
+.navbar{
+    position:relative;
+    min-height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #FC4700;
+}
+body {
+    background-color: #D49A6A;
+}
