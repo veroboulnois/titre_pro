@@ -89,10 +89,21 @@ if (isset($_POST['co_mail']) AND isset($_POST['passwordUp'])) {
         $_SESSION['mail'] = $user->mail;
         $user->getUser();
         $_SESSION['lastName'] = $user->lastName;
+        $_SESSION['id'] = $user->id;
         header('location: index.php');
         exit();
     }
         
     
+}
+$artType = new artWorkType();
+$types = $artType->showType();
+$artWork = new artWork();
+if (isset($_POST ['artWork_type'])AND isset($_POST['artWork_name'])AND isset($_POST['artWork_description'])){
+   $artWork->name = strip_tags($_POST['artWork_name']);
+   $artWork->id_tp_artWorkType = strip_tags($_POST ['artWork_type']);
+   $artWork->description = strip_tags($_POST ['artWork_description']);
+   $artWork->id_tp_users = $_SESSION['id'];
+   $artWork->addArtWork();
 }
     

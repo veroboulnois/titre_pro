@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,34 +14,41 @@
         <title>Contact</title>
     </head>
     <body>
-        <!----------------------------modal formulaire contact------------------->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Accueil</a>
+        <?php include 'header.php'; ?>
+            <div class="jumbotron">
+                <div class="container">
+                    <form method="post" action="envoi.php">
+
+                        <p><label for="nom">Nom *</label> : <input type="text" name="nom" placeholder="Entrez votre nom" required/></p>
+
+                        <p><label for="prenom">Prénom *</label> : <input type="text" name="prenom" placeholder="Entrez votre prénom"required/> </p>
+
+                        <p><label for="mail">Email *</label> : <input type="mail" name="mail" placeholder="Entrez une adresse valide"required/></p>
+
+                        <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
+
+                        <input type="submit" value="Envoyer" /></form>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="menu"><a href="stoneSculpture.php">Sculpture Pierre</a></li>
-                    <li class="menu"><a href="woodSculpture.php">Sculpture Bois</a></li>
-                    <li class="menu"><a href="painting.php">Peinture</a></li>
-                    <li class="menu"><a href="contact.php">Contact</a></li>
-                </ul>
-            </div>
-        </nav>       
-        <div class="jumbotron">
-            <div class="container">
-                <form method="post" action="envoi.php">
-
-                    <p><label for="nom">Nom *</label> : <input type="text" name="nom" placeholder="Entrez votre nom" required/></p>
-
-                    <p><label for="prenom">Prénom *</label> : <input type="text" name="prenom" placeholder="Entrez votre prénom"required/> </p>
-
-                    <p><label for="mail">Email *</label> : <input type="mail" name="mail" placeholder="Entrez une adresse valide"required/></p>
-
-                    <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
-
-                    <input type="submit" value="Envoyer" /></form>
-            </div>
-        </div> 
+            </div> 
     </body>
+    <footer>
+        <!-- Copyright and social media section -->
+        <section class="copyright-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="logo">
+                            <!-- Replace Your logo and remove text  -->
+                            <!-- <img src="images/logo.png" class="img-responsive center-block"> -->
+                            <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
+                        </div>
+                        <div class="copyright">
+                            <p>Copyright &copy; 2017. Véronique Boulnois.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--  End of copyright and social media section -->
+    </footer> <!--  End of footer -->
 </html>
+
