@@ -16,7 +16,7 @@ class user {
      */
     public function __construct() {
         try {
-            $this->pdo = new pdo('mysql:host=localhost;dbname=art;charset=utf8', 'root', 'laenopsis13');
+            $this->pdo = new pdo('mysql:host=localhost;dbname=art;charset=utf8', 'vero', '220971');
         } catch (Exception $ex) {
             die('Erreur : ' . $ex->getMessage());
         }

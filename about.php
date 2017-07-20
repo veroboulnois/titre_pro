@@ -20,9 +20,9 @@ session_start();
                 <div class="col-lg-12"
                      <p>"Petit-fils d'un tailleur de pierre et maçon de métier, j'ai toujours eu un rapport particulier à cette matière. Là, encore c'est ma rencontre avec un jeune sculpteur, élève de Serge Damiens, qui m'amènera à me lancer.
                         Pendant sept ans, ce dernier, m'a appris toutes les techniques dont j'avais besoin. Car, on ne rajoute pas à la pierre. Fort de cette expérience, j'ai décidé de profiter de mon atelier placé sous la maison pour faire vivre les blocs de pierre et de bois.
-                        Tout est prétexte à créer. Aujourd'hui, plus que jamais, ce sont les blocs de pierre qui guident mon travail, ils me donnent une indication sur ce que l'on peux faire. C'est notamment le cas avec la stéatite, une roche très tendre, que je réalise une partie de mon travail.Utilisée depuis des millénaires, j'aime l'idée de reproduire les gestes des sculpteurs, il y a des centaines d'années."
+                        Tout est prétexte à créer. Aujourd'hui, plus que jamais, ce sont les blocs de pierre qui guident mon travail, ils me donnent une indication sur ce que l'on peux faire. C'est notamment le cas avec la stéatite, une roche très tendre, que je réalise une partie de mon travail.Utilisée depuis des millénaires, j'aime l'idée de reproduire les gestes des sculpteurs, il y a des centaines d'années.
                     </p>
-                     <p>Passionné et avec l'envie de partager, je vous propose 
+                     <p>Passionné et avec l'envie de partager, je vous propose ce réseau social, chaque artiste peut s'inscrire et déposer les photos de ses oeuvres. Les visiteurs du site pourront quand à eux noter les oeuvres sous forme d'étoiles." 
                         
                     </p>
                     <p>Michel BOULNOIS</p>

@@ -16,14 +16,15 @@ if (isset($_POST['verifmail'])) {
 }
 //Instanciation de l'objet user
 $user = new user();
-if (isset($_GET['disconnect'])){
+if (isset($_GET['disconnect'])) {
     session_destroy();
     header('location:/index.php');
 }
-$regexName = '/^[a-zàéèôùïäö]{2,30}[\n-_]{0,10}?[a-zàéèôùïäö]{0,30}?[^0-9]$/i';
+$regexName = '/(?=^.{3,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$/';
 $regexMail = '/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/';
 $errorList = array();
 $message = '';
+$addUsersId = '';
 //On vérifie si l'on a bien appuyé sur le bouton Enregistrer
 if (isset($_POST['save'])) {
 
@@ -64,15 +65,22 @@ if (isset($_POST['save'])) {
         }
         //S'il n'y a pas d'erreur, on ajoute l'utilisateur
         if (empty($errorList)) {
-            $user->addUser();
+            //si utilisateur est ajouté alors on crée son dossier avec le nom de le chemin du dossier
+            if ($user->addUser()) {
+                $addUsersDir = $_POST['mail'].'_'.$_POST['lastName'];
+                $path = 'assets/usersFiles/'. $addUsersDir;
+                //si ce dossier n'existe pas alors je creee le dossier artiste
+                if (!is_dir($path)) {                    
+                mkdir($path);
+                //permet de créer un index vide pour sécuriser
+                $securFile = fopen($path.'/index.html', 'w');
+                fclose($securFile);
+                }
+            }
         }
     }
 }
 
-
-//  }
-// }
-//}
 //Déclaration des variables
 $isOk = 0;
 //Instanciation de l'objet user
@@ -93,17 +101,15 @@ if (isset($_POST['co_mail']) AND isset($_POST['passwordUp'])) {
         header('location: index.php');
         exit();
     }
-        
-    
 }
 $artType = new artWorkType();
 $types = $artType->showType();
 $artWork = new artWork();
-if (isset($_POST ['artWork_type'])AND isset($_POST['artWork_name'])AND isset($_POST['artWork_description'])){
-   $artWork->name = strip_tags($_POST['artWork_name']);
-   $artWork->id_tp_artWorkType = strip_tags($_POST ['artWork_type']);
-   $artWork->description = strip_tags($_POST ['artWork_description']);
-   $artWork->id_tp_users = $_SESSION['id'];
-   $artWork->addArtWork();
+if (isset($_POST ['artWork_type'])AND isset($_POST['artWork_name'])AND isset($_POST['artWork_description'])) {
+    $artWork->name = strip_tags($_POST['artWork_name']);
+    $artWork->id_tp_artWorkType = strip_tags($_POST ['artWork_type']);
+    $artWork->description = strip_tags($_POST ['artWork_description']);
+    $artWork->id_tp_users = $_SESSION['id'];
+    $artWork->addArtWork();
 }
     

@@ -15,23 +15,18 @@ session_start();
     </head>
     <body>
         <?php include 'header.php'; ?>
-            <div class="jumbotron">
-                <div class="container">
-                    <form method="post" action="envoi.php">
-
-                        <p><label for="nom">Nom *</label> : <input type="text" name="nom" placeholder="Entrez votre nom" required/></p>
-
-                        <p><label for="prenom">Prénom *</label> : <input type="text" name="prenom" placeholder="Entrez votre prénom"required/> </p>
-
-                        <p><label for="mail">Email *</label> : <input type="mail" name="mail" placeholder="Entrez une adresse valide"required/></p>
-
-                        <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
-
-                        <input type="submit" value="Envoyer" /></form>
-                </div>
-            </div> 
+        <div class="jumbotron">
+            <div class="container">
+                <form method="post" action="envoi.php">
+                    <p><label for="nom">Nom *</label> : <input type="text" name="nom" placeholder="Entrez votre nom" required/></p>
+                    <p><label for="prenom">Prénom *</label> : <input type="text" name="prenom" placeholder="Entrez votre prénom"required/> </p>
+                    <p><label for="mail">Email *</label> : <input type="mail" name="mail" placeholder="Entrez une adresse valide"required/></p>
+                    <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
+                    <input type="submit" value="Envoyer" /></form>
+            </div>
+        </div> 
     </body>
-    <footer>
+   <footer>
         <!-- Copyright and social media section -->
         <section class="copyright-section">
             <div class="container">
@@ -41,6 +36,13 @@ session_start();
                             <!-- Replace Your logo and remove text  -->
                             <!-- <img src="images/logo.png" class="img-responsive center-block"> -->
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
+                        </div>
+                        <div class="social-media">
+                            <ul class="list-inline">
+                                <li><a href="" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
                         </div>
                         <div class="copyright">
                             <p>Copyright &copy; 2017. Véronique Boulnois.</p>

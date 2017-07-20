@@ -148,9 +148,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/deesse.jpg" alt="déesse bas relief"/>
+                            <img src="assets/img/coque.jpg" alt="coque"/>
                             <figcaption>
-                                <h2><span>Déesse </span></h2>
+                                <h2><span>Coque </span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>

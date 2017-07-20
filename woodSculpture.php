@@ -24,9 +24,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/moine.jpg" alt="sculpture moine"/>
+                            <img src="assets/img/rhino.jpg" alt="sculpture bois rhino"/>
                             <figcaption>
-                                <h2><span>Moine</span> bois</h2>
+                                <h2><span>Rhino</span> bois</h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -60,7 +60,7 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/sharp.jpg" alt="sculpture requin sur socle"/>
+                            <img src="assets/img/shark.jpg" alt="sculpture requin sur socle"/>
                             <figcaption>
                                 <h2><span>Requin</span></h2>
                                 <p>
@@ -96,9 +96,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/moto.jpg" alt="Moto"/>
+                            <img src="assets/img/shark.jpg" alt="requin"/>
                             <figcaption>
-                                <h2><span>Moto</span></h2>
+                                <h2><span>Requin</span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -112,9 +112,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/chien.jpg" alt="chien pierre"/>
+                            <img src="assets/img/shark.jpg" alt="requin bois"/>
                             <figcaption>
-                                <h2><span>Chien</span></h2>
+                                <h2><span>Requin</span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -148,9 +148,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/deesse.jpg" alt="déesse bas relief"/>
+                            <img src="assets/img/woman1.jpg" alt="visage pierre"/>
                             <figcaption>
-                                <h2><span>Déesse </span></h2>
+                                <h2><span>Visage </span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -168,9 +168,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/basrelief.jpg" alt="bas relief pierre"/>
+                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
                             <figcaption>
-                                <h2><span>Profil </span></h2>
+                                <h2><span>Coque </span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>

@@ -24,7 +24,7 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/peinture.jpg" alt=""/>
+                            <img src="assets/img/woman1.jpg" alt="woman"/>
                             <figcaption>
                                 <h2><span></span> </h2>
                                 <p>
@@ -40,7 +40,7 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/bateaux.jpg" alt=""/>
+                            <img src="assets/img/woman1.jpg" alt=""/>
                             <figcaption>
                                 <h2><span>bateaux</span></h2>
                                 <p>
@@ -60,9 +60,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/phoquerocher.jpg" alt="sculpture phoque pierre"/>
+                            <img src="assets/img/woman1.jpg" alt="femme"/>
                             <figcaption>
-                                <h2><span>Phoque</span></h2>
+                                <h2><span>Visage</span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -76,9 +76,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/naturemorte.jpg" alt="sculpture coquillage"/>
+                            <img src="assets/img/woman1.jpg" alt="sculpture femme"/>
                             <figcaption>
-                                <h2><span>Nature Morte</span></h2>
+                                <h2><span>Visage</span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -96,9 +96,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/buste.jpg" alt="buste pierre"/>
+                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
                             <figcaption>
-                                <h2><span>Buste</span></h2>
+                                <h2><span>Coque</span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -112,9 +112,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/chien.jpg" alt="chien pierre"/>
+                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
                             <figcaption>
-                                <h2><span>Chien</span></h2>
+                                <h2><span>Coque</span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -148,9 +148,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/deesse.jpg" alt="déesse bas relief"/>
+                            <img src="assets/img/coquillage.jpg" alt="coquillage"/>
                             <figcaption>
-                                <h2><span>Déesse </span></h2>
+                                <h2><span>Coquillage </span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -168,9 +168,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/basrelief.jpg" alt="bas relief pierre"/>
+                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
                             <figcaption>
-                                <h2><span>Profil </span></h2>
+                                <h2><span>Coque </span></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>

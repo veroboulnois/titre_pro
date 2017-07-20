@@ -31,7 +31,8 @@
                                     <label for="lastName">Nom :</label>
                                 </div>
                                 <div class="col-lg-4">
-                                    <input type="text" name="lastName" id="lastName">                                         
+                                    <input type="text" name="lastName" id="lastName">
+                                    <small><?= (isset($errorList['lastName'])) ? $errorList['lastName'] : '' ?></small>
                                 </div>
                             </div>
                             <div class="row">
@@ -131,45 +132,17 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if (!empty($_SESSION)) { ?>
-                    <li class="dropdown col-lg-1 col-lg-offset-4 col-xs-offset-0 col-xs-5"><button class="btn-lg" data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" ><?= $_SESSION['lastName'] ?> <span class="caret glyphicon glyphicon-user"></span></button>
+                    <li class="dropdown col-lg-1 col-lg-offset-4 col-xs-offset-0 col-xs-5"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?= $_SESSION['lastName'] ?><span class="caret"></span></a>
                         <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu dropdown-menu-primary">
-                            <li><a  href="profile.php" >Mon Profil</a></li>
-                            <li><a  href="#modalContent" data-toggle="modal" data-target="#modalContent" >Ajout contenu</a></li>
-                            <li><a href="index.php?disconnect" title="déconnexion" >Déconnexion</a></li>
+                            <li><a  href="profile.php" title="Mon profil">Mon Profil</a></li>
+                            <li><a href="index.php?disconnect" title="Déconnexion" >Déconnexion</a></li>
                         </ul>
                     </li>
                 <?php } else { ?>
-                    <li><a href="#modalInscription" data-toggle="modal" data-target="#modalInscription" title="inscription"><span class="glyphicon glyphicon-user"></span> Inscription </a></li>
-                    <li><a href="#modalConnexion" data-toggle="modal" data-target="#modalConnexion" title="connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion </a></li>
+                    <li><a href="#modalInscription" data-toggle="modal" data-target="#modalInscription" title="Inscription"><span class="glyphicon glyphicon-user"></span> Inscription </a></li>
+                    <li><a href="#modalConnexion" data-toggle="modal" data-target="#modalConnexion" title="Connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion </a></li>
                 <?php } ?>
             </ul>
         </div>
     </nav>
-</div>
-<!---------------------------------------------modal ajout contenu----------------------------->
-<div class="modal fade" id="modalContent" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Veuillez créer votre espace oeuvre.</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-3">
-                         <form action="#" method="POST">
-                             <select name="artWork_type">
-                               <?php foreach ($types as $type){ ?> 
-                                <option value="<?=$type->id?>"><?=$type->name?></option>
-                               <?php } ?>                                
-                            </select>
-                            <p><label>Nom artiste : <input type="text" name="artWork_name"/></label><p/>
-                            <p><label>Description : <input type="text" name="artWork_description"/></label><p/>                                
-                            <p><input type="submit"/></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
