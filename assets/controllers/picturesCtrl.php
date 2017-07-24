@@ -19,7 +19,4 @@ if(isset($_POST['name']) && ($_POST['description'])){
     header('location: /addPictures.php?artworkId=' . $lastInsertedId . '');
     exit;
 }
-
-
-
-        
+       

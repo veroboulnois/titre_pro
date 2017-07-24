@@ -18,7 +18,7 @@ if (isset($_POST['verifmail'])) {
 $user = new user();
 if (isset($_GET['disconnect'])) {
     session_destroy();
-    header('location:/index.php');
+    header('location: /accueil');
 }
 $regexName = '/(?=^.{3,20}$)^[a-zA-Z][a-zA-Z0-9]*[._-]?[a-zA-Z0-9]+$/';
 $regexMail = '/^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/';
@@ -98,7 +98,8 @@ if (isset($_POST['co_mail']) AND isset($_POST['passwordUp'])) {
         $user->getUser();
         $_SESSION['lastName'] = $user->lastName;
         $_SESSION['id'] = $user->id;
-        header('location: index.php');
+        $_SESSION['connected'] = 1;
+        header('location: /accueil');
         exit();
     }
 }

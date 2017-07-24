@@ -1,7 +1,7 @@
 <div class="container">
     <div class="jumbotron">
         <h1>ART'S BOOK</h1>
-        <p id="text">by Michel BOULNOIS & Co</p>
+        <p id="text">By Michel BOULNOIS & Co</p>
     </div>
     <!------------------------------------- Modal inscription ---------------------------------------->
     <div class="modal fade" id="modalInscription" role="dialog">
@@ -14,7 +14,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <form action="index.php" method="POST"><!--creation des champs du formulaire avec position du texte a droite-->
+                        <form action="index.php" method="POST">
+                            <!--creation des champs du formulaire avec position du texte a droite-->
                             <div class="row">
                                 <div class="col-lg-offset-1 col-lg-3 text-right">
                                     <label for="userGroup">Catégorie :</label>
@@ -120,21 +121,21 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Accueil</a>
+                <a class="navbar-brand" href="/accueil">Accueil</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="menu"><a href="about.php">A propos</a></li>
-                <li class="menu"><a href="stoneSculpture.php">Sculpture Pierre</a></li>
-                <li class="menu"><a href="woodSculpture.php">Sculpture Bois</a></li>
-                <li class="menu"><a href="painting.php">Peinture</a></li>
-                <li class="menu"><a href="contact.php">Contact</a></li>
+                <li class="menu"><a href="/introduction">A propos</a></li>
+                <li class="menu"><a href="/pierre">Sculpture Pierre</a></li>
+                <li class="menu"><a href="/bois">Sculpture Bois</a></li>
+                <li class="menu"><a href="/peintures">Peinture</a></li>
+                <li class="menu"><a href="/contact">Contact</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if (!empty($_SESSION)) { ?>
                     <li class="dropdown col-lg-1 col-lg-offset-4 col-xs-offset-0 col-xs-5"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?= $_SESSION['lastName'] ?><span class="caret"></span></a>
                         <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu dropdown-menu-primary">
-                            <li><a  href="profile.php" title="Mon profil">Mon Profil</a></li>
+                            <li><a  href="/profil" title="Mon profil">Mon Profil</a></li>
                             <li><a href="index.php?disconnect" title="Déconnexion" >Déconnexion</a></li>
                         </ul>
                     </li>

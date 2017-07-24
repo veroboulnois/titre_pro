@@ -1,35 +1,35 @@
 
 /*
- *
- * More info at [www.dropzonejs.com](http://www.dropzonejs.com)
- *
- * Copyright (c) 2012, Matias Meno
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- */
+*
+* More info at [www.dropzonejs.com](http://www.dropzonejs.com)
+*
+* Copyright (c) 2012, Matias Meno
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+* THE SOFTWARE.
+*
+*/
 
 (function() {
   var Dropzone, Emitter, ExifRestore, camelize, contentLoaded, detectVerticalSquash, drawImageIOSFix, noop, without,
-    slice = [].slice,
-    extend1 = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
-    hasProp = {}.hasOwnProperty;
+  slice = [].slice,
+  extend1 = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
+  hasProp = {}.hasOwnProperty;
 
   noop = function() {};
 
@@ -108,8 +108,8 @@
 
     You can register an event handler like this:
 
-        dropzone.on("dragEnter", function() { });
-     */
+    dropzone.on("dragEnter", function() { });
+    */
 
     Dropzone.prototype.events = ["drop", "dragstart", "dragend", "dragenter", "dragover", "dragleave", "addedfile", "addedfiles", "removedfile", "thumbnail", "error", "errormultiple", "processing", "processingmultiple", "uploadprogress", "totaluploadprogress", "sending", "sendingmultiple", "success", "successmultiple", "canceled", "canceledmultiple", "complete", "completemultiple", "reset", "maxfilesexceeded", "maxfilesreached", "queuecomplete"];
 
@@ -149,17 +149,17 @@
       renameFilename: null,
       renameFile: null,
       forceFallback: false,
-      dictDefaultMessage: "Déposez votre photo ici",
-      dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
-      dictFallbackText: "Please use the fallback form below to upload your files like in the olden days.",
-      dictFileTooBig: "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.",
-      dictInvalidFileType: "Vous ne pouvez pas envoyer ce type de fichier.",
-      dictResponseError: "Server responded with {{statusCode}} code.",
-      dictCancelUpload: "Cancel upload",
-      dictCancelUploadConfirmation: "Are you sure you want to cancel this upload?",
-      dictRemoveFile: "Remove file",
+      dictDefaultMessage: "Déposer des fichiers ici pour télécharger",
+      dictFallbackMessage: "Votre navigateur ne prend pas en charge les téléchargements de fichiers de Drag'n'drop.",
+      dictFallbackText: "Utilisez le formulaire de recharge ci-dessous pour télécharger vos fichiers comme dans les temps anciens.",
+      dictFileTooBig: "Le fichier est trop grand ({{fileize}} MiB). Taille maximale du fichier: {{maxFilesize}} MiB.",
+      dictInvalidFileType: "Vous ne pouvez pas télécharger de fichiers de ce type.",
+      dictResponseError: "Le serveur a répondu avec le code {{statusCode}}.",
+      dictCancelUpload: "Annuler le chargement",
+      dictCancelUploadConfirmation: "Êtes-vous sûr de vouloir annuler ce téléchargement?",
+      dictRemoveFile: "Effacer le fichier",
       dictRemoveFileConfirmation: null,
-      dictMaxFilesExceeded: "You can not upload any more files.",
+      dictMaxFilesExceeded: "Vous ne pouvez plus télécharger d'autres fichiers.",
       dictFileSizeUnits: {
         tb: "TB",
         gb: "GB",
@@ -260,7 +260,7 @@
       You can overwrite them if you don't like the default behavior. If you just
       want to add an additional event handler, register it on the dropzone object
       and don't overwrite those options.
-       */
+      */
       drop: function(e) {
         return this.element.classList.remove("dz-drag-hover");
       },
@@ -1195,33 +1195,33 @@
             }
             switch (orientation) {
               case 2:
-                ctx.translate(canvas.width, 0);
-                ctx.scale(-1, 1);
-                break;
+              ctx.translate(canvas.width, 0);
+              ctx.scale(-1, 1);
+              break;
               case 3:
-                ctx.translate(canvas.width, canvas.height);
-                ctx.rotate(Math.PI);
-                break;
+              ctx.translate(canvas.width, canvas.height);
+              ctx.rotate(Math.PI);
+              break;
               case 4:
-                ctx.translate(0, canvas.height);
-                ctx.scale(1, -1);
-                break;
+              ctx.translate(0, canvas.height);
+              ctx.scale(1, -1);
+              break;
               case 5:
-                ctx.rotate(0.5 * Math.PI);
-                ctx.scale(1, -1);
-                break;
+              ctx.rotate(0.5 * Math.PI);
+              ctx.scale(1, -1);
+              break;
               case 6:
-                ctx.rotate(0.5 * Math.PI);
-                ctx.translate(0, -canvas.height);
-                break;
+              ctx.rotate(0.5 * Math.PI);
+              ctx.translate(0, -canvas.height);
+              break;
               case 7:
-                ctx.rotate(0.5 * Math.PI);
-                ctx.translate(canvas.width, -canvas.height);
-                ctx.scale(-1, 1);
-                break;
+              ctx.rotate(0.5 * Math.PI);
+              ctx.translate(canvas.width, -canvas.height);
+              ctx.scale(-1, 1);
+              break;
               case 8:
-                ctx.rotate(-0.5 * Math.PI);
-                ctx.translate(-canvas.width, 0);
+              ctx.rotate(-0.5 * Math.PI);
+              ctx.translate(-canvas.width, 0);
             }
             drawImageIOSFix(ctx, img, (ref = resizeInfo.srcX) != null ? ref : 0, (ref1 = resizeInfo.srcY) != null ? ref1 : 0, resizeInfo.srcWidth, resizeInfo.srcHeight, (ref2 = resizeInfo.trgX) != null ? ref2 : 0, (ref3 = resizeInfo.trgY) != null ? ref3 : 0, resizeInfo.trgWidth, resizeInfo.trgHeight);
             thumbnail = canvas.toDataURL("image/png");
@@ -1790,7 +1790,7 @@
   Bugfix for iOS 6 and 7
   Source: http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   based on the work of https://github.com/stomita/ios-imagefile-megapixel
-   */
+  */
 
   detectVerticalSquash = function(img) {
     var alpha, canvas, ctx, data, ey, ih, iw, py, ratio, sy;
@@ -1984,18 +1984,18 @@
 
 
   /*
-   * contentloaded.js
-   *
-   * Author: Diego Perini (diego.perini at gmail.com)
-   * Summary: cross-browser wrapper for DOMContentLoaded
-   * Updated: 20101020
-   * License: MIT
-   * Version: 1.2
-   *
-   * URL:
-   * http://javascript.nwbox.com/ContentLoaded/
-   * http://javascript.nwbox.com/ContentLoaded/MIT-LICENSE
-   */
+  * contentloaded.js
+  *
+  * Author: Diego Perini (diego.perini at gmail.com)
+  * Summary: cross-browser wrapper for DOMContentLoaded
+  * Updated: 20101020
+  * License: MIT
+  * Version: 1.2
+  *
+  * URL:
+  * http://javascript.nwbox.com/ContentLoaded/
+  * http://javascript.nwbox.com/ContentLoaded/MIT-LICENSE
+  */
 
   contentLoaded = function(win, fn) {
     var add, doc, done, init, poll, pre, rem, root, top;

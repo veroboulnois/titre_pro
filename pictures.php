@@ -46,10 +46,6 @@ include_once 'assets/controllers/picturesCtrl.php';
                 </div>
                 <button type="submit" name="add_artwork" class="btn btn-default">Envoyer</button>
             </form>
-            <h4>Liste des oeuvres :</h4>
-            <ul>
-                <li>Nom : </li>
-                <li>Description :</li>
             </ul>
         </div>
     </body>
@@ -63,9 +59,9 @@ include_once 'assets/controllers/picturesCtrl.php';
                         </div>
                         <div class="social-media">
                             <ul class="list-inline">
-                                <li><a href="" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                         <div class="copyright">

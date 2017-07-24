@@ -18,21 +18,18 @@ session_start();
        
     </body>
     <footer>
-        <!-- Copyright and social media section -->
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="logo">
-                            <!-- Replace Your logo and remove text  -->
-                            <!-- <img src="images/logo.png" class="img-responsive center-block"> -->
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                         </div>
                         <div class="social-media">
                             <ul class="list-inline">
-                                <li><a href="" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
                         <div class="copyright">
@@ -41,6 +38,6 @@ session_start();
                     </div>
                 </div>
             </div>
-        </section><!--  End of copyright and social media section -->
-    </footer> <!--  End of footer -->
+        </section>
+    </footer>
 </html>

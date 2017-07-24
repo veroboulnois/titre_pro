@@ -45,11 +45,34 @@ class artWork {
      */
     public function showArtWork() {
         $select = 'SELECT `tp_artWorks`.`id`,`tp_artWorks`.`name`,`tp_artWorks`.`description`,`tp_artWorks`.`id_tp_artWorkType`,`tp_artWorks`.`id_tp_users`, `tp_users`.`lastName`,`tp_users`.`firstName` FROM `tp_artWorks` '
-                . 'LEFT JOIN `tp_users` ON `tp_artWorks`.`id_tp_users` = `tp_users`.`id` '
+                . 'INNER JOIN `tp_users` ON `tp_artWorks`.`id_tp_users` = `tp_users`.`id` '
                 . 'WHERE `id_tp_users`=:id_tp_users';
         $queryPrepare = $this->pdo->prepare($select);
         $queryPrepare->bindValue(':id_tp_users', $this->id_tp_users, PDO::PARAM_INT);
         $queryPrepare->execute();
         return $queryPrepare->fetchAll(PDO::FETCH_OBJ);
     }
+    public function showAllArtWork() {
+        $select = 'SELECT `tp_artWorks`.`id`,`tp_artWorks`.`name`,`tp_artWorks`.`description`,`tp_artWorks`.`id_tp_artWorkType`,`tp_artWorks`.`id_tp_users`, `tp_users`.`lastName`,`tp_users`.`firstName`, `tp_artWorkImg`.`link`, `tp_artWorkImg`.`name` AS `imgName`'
+                . ' FROM `tp_artWorks` '
+                . 'INNER JOIN `tp_users` '
+                . 'ON `tp_artWorks`.`id_tp_users` = `tp_users`.`id` '
+                . 'LEFT JOIN `tp_artWorkImg` '
+                . 'ON `tp_artWorkImg`.`id_tp_artWorks` =`tp_artWorks`.`id` '
+                . 'WHERE `tp_artWorks`.`id_tp_artWorkType` = :id_tp_artWorkType';
+        $queryPrepare = $this->pdo->prepare($select);
+        $queryPrepare->bindValue(':id_tp_artWorkType', $this->id_tp_artWorkType, PDO::PARAM_INT);
+        $queryPrepare->execute();
+        return $queryPrepare->fetchAll(PDO::FETCH_OBJ);
+    }
+    /** Methode permettant de supprimer une oeuvre d'un utilisateur donné
+     * @return boolean
+     */
+    public function deleteArtWork() {
+        $query = 'DELETE FROM `tp_artWorks` WHERE `id_tp_users`= :id_tp_users AND `id` = :id ';
+        $queryResult = $this->pdo->prepare($query);
+        $queryResult->bindValue(':id_tp_users', $this->id_tp_users, PDO::PARAM_INT);        
+        $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
+        return $queryResult->execute();
+}
 }
