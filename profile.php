@@ -1,9 +1,11 @@
 <?php
 session_start();
-include_once 'assets/models/user.php';
-include_once 'assets/models/artWork.php';
-include_once 'assets/models/artWorkType.php';
-include_once 'assets/controllers/profileCtrl.php';
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/user.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkType.php';
+include_once 'controllers/profileCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@ include_once 'assets/controllers/profileCtrl.php';
             <div class="container" id="block">
                 <div class="row">
                     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-offset-0 col-lg-3 carre2">
-                        <p><a class="link" href="/info">Mes coordonnées</a></p>
+                        <p><a class="link" href="/informations.php">Mes coordonnées</a></p>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
                         <p><a class="link" href="/photo">Ajouter mes oeuvres</a></p>
@@ -36,13 +38,13 @@ include_once 'assets/controllers/profileCtrl.php';
                 <br>
                 <div class="row">
                     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-3 carre2">
-                        <p><a class="link" href="favorit.php">Mes favoris</a></p>
+                        <p><a class="link" href="/favo">Mes favoris</a></p>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
-                        <p><a class="link" href="vote.php">Mes votes</a></p>
+                        <p><a class="link" href="/like">Mes votes</a></p>
                     </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
-                        <p><a class="link" href="others.php">Divers</a></p>
+                        <p><a class="link" href="/divers">Divers</a></p>
                     </div>
                 </div>
             </div>

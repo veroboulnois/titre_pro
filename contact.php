@@ -18,23 +18,34 @@ session_start();
         <div class="jumbotron">
             <div class="container">
                 <form method="post" action="envoi.php">
-                    <p><label for="nom">Nom *</label> : <input type="text" name="nom" placeholder="Entrez votre nom" required/></p>
-                    <p><label for="prenom">Prénom *</label> : <input type="text" name="prenom" placeholder="Entrez votre prénom"required/> </p>
-                    <p><label for="mail">Email *</label> : <input type="mail" name="mail" placeholder="Entrez une adresse valide"required/></p>
-                    <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
-                    <input type="submit" value="Envoyer" /></form>
+                    <form>
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Entrez votre email"required>
+                        </div>
+                        <div class="form-group">
+                            <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
+                        </div>
+                        <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                    </form> 
             </div>
         </div> 
     </body>
-   <footer>
-        <!-- Copyright and social media section -->
+    <!-- footer-->
+    <footer>
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="logo">
-                            <!-- Replace Your logo and remove text  -->
-                            <!-- <img src="images/logo.png" class="img-responsive center-block"> -->
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                         </div>
                         <div class="social-media">
@@ -50,7 +61,7 @@ session_start();
                     </div>
                 </div>
             </div>
-        </section><!--  End of copyright and social media section -->
-    </footer> <!--  End of footer -->
+        </section>
+    </footer>
 </html>
 

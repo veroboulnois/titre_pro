@@ -1,9 +1,11 @@
 <?php
 session_start();
-include_once 'assets/models/user.php';
-include_once 'assets/models/artWork.php';
-include_once 'assets/models/artWorkType.php';
-include_once 'assets/controllers/indexCtrl.php';
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/user.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkType.php';
+include_once 'controllers/indexCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>

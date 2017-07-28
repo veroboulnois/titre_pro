@@ -1,9 +1,11 @@
 <?php
 session_start();
-include_once 'assets/models/artWork.php';
-include_once 'assets/models/artWorkImg.php';
-include_once 'assets/models/artWorkType.php';
-include_once 'assets/controllers/picturesCtrl.php';
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkImg.php';
+include_once 'models/artWorkType.php';
+include_once 'controllers/picturesCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +23,7 @@ include_once 'assets/controllers/picturesCtrl.php';
     </head>
     <body>
         <?php include 'header.php'; ?>
-        <div class="container">
+        <div class="container" id="workArt">
             <form action="pictures.php" method="POST" class="form-inline">
                 <div class="row">
                     <div class="col-lg-4">

@@ -1,9 +1,11 @@
 <?php
 session_start();
-include_once 'assets/models/artWorkImg.php';
-include_once 'assets/models/artWork.php';
-include_once 'assets/models/artWorkType.php';
-include_once 'assets/controllers/addPicturesCtrl.php';
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/artWorkImg.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkType.php';
+include_once 'controllers/addPicturesCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>

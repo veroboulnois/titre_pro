@@ -1,11 +1,13 @@
 <?php
 session_start();
 if (isset($_SESSION['connected'])) {
-    include_once 'assets/models/user.php';
-    include_once 'assets/models/artWork.php';
-    include_once 'assets/models/artWorkImg.php';
-    include_once 'assets/models/artWorkType.php';
-    include_once 'assets/controllers/artWorksCtrl.php';
+    include_once 'configuration.php';
+    include_once 'class/database.php';
+    include_once 'models/user.php';
+    include_once 'models/artWork.php';
+    include_once 'models/artWorkImg.php';
+    include_once 'models/artWorkType.php';
+    include_once 'controllers/artWorksCtrl.php';
     ?>
     <!DOCTYPE html>
     <html>
@@ -21,7 +23,7 @@ if (isset($_SESSION['connected'])) {
         </head>
         <body>
             <?php include 'header.php'; ?>
-            <div class="container">
+            <div class="container" id="listArt">
                 <div class="row">
                     <?php foreach ($listArtWorks as $listArtWork) { ?>
                         <div class="row artworkList">

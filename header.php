@@ -3,7 +3,7 @@
         <h1>ART'S BOOK</h1>
         <p id="text">By Michel BOULNOIS & Co</p>
     </div>
-    <!------------------------------------- Modal inscription ---------------------------------------->
+    <!-- Modal inscription -->
     <div class="modal fade" id="modalInscription" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <!------------------------------------- Modal connexion ---------------------------------------->
+    <!--Modal connexion-->
     <div class="modal fade" id="modalConnexion" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -117,7 +117,7 @@
             </div>
         </div>
     </div>
-    <!----barre navigation------------------------------------->
+    <!--barre navigation-->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -136,7 +136,13 @@
                     <li class="dropdown col-lg-1 col-lg-offset-4 col-xs-offset-0 col-xs-5"><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <?= $_SESSION['lastName'] ?><span class="caret"></span></a>
                         <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu dropdown-menu-primary">
                             <li><a  href="/profil" title="Mon profil">Mon Profil</a></li>
-                            <li><a href="index.php?disconnect" title="Déconnexion" >Déconnexion</a></li>
+                            <li><a  href="/info" title="Mes coordonnées">Mes coordonnées</a></li>
+                            <li><a  href="/photo" title="Ajouter mes oeuvres">Ajouter mes oeuvres</a></li>
+                            <li><a  href="/oeuvres" title="Mes oeuvres">Mes oeuvres</a></li>
+                            <li><a  href="/favo" title="Mes favoris">Mes favoris</a></li>
+                            <li><a  href="/like" title="Mes votes">Mes votes</a></li>
+                            <li><a  href="/divers" title="Divers">Divers</a></li>
+                            <li><a href="../index.php?disconnect" title="Déconnexion" >Déconnexion</a></li>
                         </ul>
                     </li>
                 <?php } else { ?>

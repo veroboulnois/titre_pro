@@ -1,10 +1,12 @@
 <?php
 session_start();
-include_once 'assets/models/artWork.php';
-include_once 'assets/models/artWorkImg.php';
-include_once 'assets/models/artWorkType.php';
-include_once 'assets/models/user.php';
-include_once 'assets/controllers/stoneSculptureCtrl.php';
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkImg.php';
+include_once 'models/artWorkType.php';
+include_once 'models/user.php';
+include_once 'controllers/stoneSculptureCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,229 +24,61 @@ include_once 'assets/controllers/stoneSculptureCtrl.php';
     <body>
         <?php include 'header.php'; ?>
         <div class="container-fluid">
-
             <?php
             foreach ($allListArtWorks as $val => $allListArtWork) {
                 if ($val % 2 == 0) {
                     ?>
-            <div class="container"
-               
-                    <div class="row artwork">
-    <?php } ?>
-                    <div class="grid">
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="<?= $allListArtWork->link ?>"/>
-                            <figcaption>
-                                <h2><span><?= $allListArtWork->name ?></span> <?= $allListArtWork->description ?></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
+                    <div class="container">
+
+                        <div class="row artwork">
+                        <?php } ?>
+                        <div class="grid">
+                            <figure class="effect-terry">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <img src="<?= $allListArtWork->link ?>"/>
+                                <figcaption>
+                                    <h2><span><?= $allListArtWork->name ?></span> <?= $allListArtWork->description ?></h2>
+                                    <p>
+                                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
+                                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
+                                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
+                                    </p>
+                                </figcaption> 
+                            </figure>
+                        </div>
+                        <?php if ($val % 2 == 1) { ?>
+                        </div>
                     </div>
-                <?php if ($val % 2 == 1) { ?>
-                    </div>
-        </div>
                     <?php
                 }
             }
             ?>
-            <!--<figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/face.jpg" alt="face sur socle"/>
-                <figcaption>
-                    <h2><span>Visage</span> socle</h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-        </div>
-    </div>
-    <div class="row">
-        <div class="grid">
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/phoque.jpg" alt="sculpture phoque pierre"/>
-                <figcaption>
-                    <h2><span>Phoque</span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/coquillage.jpg" alt="sculpture coquillage"/>
-                <figcaption>
-                    <h2><span>Coquillage</span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-        </div>
-    </div>
-    <div class="row">
-        <div class="grid">
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/buste.jpg" alt="buste pierre"/>
-                <figcaption>
-                    <h2><span>Buste</span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/chien.jpg" alt="chien pierre"/>
-                <figcaption>
-                    <h2><span>Chien</span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-        </div>
-    </div>
-    <div class="row">
-        <div class="grid">
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/woman1.jpg" alt="visage pierre"/>
-                <figcaption>
-                    <h2><span>Visage</span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/coque.jpg" alt="coque"/>
-                <figcaption>
-                    <h2><span>Coque </span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-        </div>
-    </div>
-    <div class="row">
-        <div class="grid">
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/basrelief.jpg" alt="bas relief pierre"/>
-                <figcaption>
-                    <h2><span>Profil </span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-            <figure class="effect-terry">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <img src="assets/img/coque.jpg" alt="Coquillage coque"/>
-                <figcaption>
-                    <h2><span>Coque </span></h2>
-                    <p>
-                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                    </p>
-                </figcaption> 
-            </figure>
-        </div>-->
-
-
-</body>
-<footer>
-    <!-- Copyright and social media section -->
-    <section class="copyright-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="logo">
-                        <!-- Replace Your logo and remove text  -->
-                        <!-- <img src="images/logo.png" class="img-responsive center-block"> -->
-                        <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
-                    </div>
-                    <div class="social-media">
-                        <ul class="list-inline">
-                            <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="copyright">
-                        <p>Copyright &copy; 2017. Véronique Boulnois.</p>
+    </body>
+    <footer>
+        <section class="copyright-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="logo">
+                            <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
+                        </div>
+                        <div class="social-media">
+                            <ul class="list-inline">
+                                <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p>Copyright &copy; 2017. Véronique Boulnois.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section><!--  End of copyright and social media section -->
-</footer> <!--  End of footer -->
+        </section>
+    </footer>
 </html>

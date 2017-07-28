@@ -1,5 +1,12 @@
 <?php
 session_start();
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkImg.php';
+include_once 'models/artWorkType.php';
+include_once 'models/user.php';
+include_once 'controllers/paintingCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,9 +21,17 @@ session_start();
         <title>Peinture</title>
     </head>
     <body>
-        <?php include 'header.php'; ?>
-            <div class="container-fluid">
-                <div class="row">
+       <?php include 'header.php'; ?>
+        <div class="container-fluid">
+
+            <?php
+            foreach ($allListArtWorks as $val => $allListArtWork) {
+                if ($val % 2 == 0) {
+                    ?>
+            <div class="container"
+               
+                    <div class="row artwork">
+    <?php } ?>
                     <div class="grid">
                         <figure class="effect-terry">
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -24,25 +39,9 @@ session_start();
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/woman1.jpg" alt="woman"/>
+                            <img src="<?= $allListArtWork->link ?>"/>
                             <figcaption>
-                                <h2><span></span> </h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/woman1.jpg" alt=""/>
-                            <figcaption>
-                                <h2><span>bateaux</span></h2>
+                                <h2><span><?= $allListArtWork->name ?></span> <?= $allListArtWork->description ?></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -51,152 +50,13 @@ session_start();
                             </figcaption> 
                         </figure>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="grid">
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/woman1.jpg" alt="femme"/>
-                            <figcaption>
-                                <h2><span>Visage</span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/woman1.jpg" alt="sculpture femme"/>
-                            <figcaption>
-                                <h2><span>Visage</span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
+                <?php if ($val % 2 == 1) { ?>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="grid">
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
-                            <figcaption>
-                                <h2><span>Coque</span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
-                            <figcaption>
-                                <h2><span>Coque</span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="grid">
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/woman1.jpg" alt="visage pierre"/>
-                            <figcaption>
-                                <h2><span>Visage</span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/coquillage.jpg" alt="coquillage"/>
-                            <figcaption>
-                                <h2><span>Coquillage </span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="grid">
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/coque.jpg" alt="coque pierre"/>
-                            <figcaption>
-                                <h2><span>Coque </span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                        <figure class="effect-terry">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="assets/img/coque.jpg" alt="Coquillage coque"/>
-                            <figcaption>
-                                <h2><span>Coque </span></h2>
-                                <p>
-                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                </p>
-                            </figcaption> 
-                        </figure>
-                    </div>
-                </div>
-            </div>
+        </div>
+                    <?php
+                }
+            }
+            ?>
     </body>
     <footer>
         <section class="copyright-section">

@@ -1,10 +1,12 @@
 <?php
 session_start();
-include_once 'assets/models/artWork.php';
-include_once 'assets/models/artWorkImg.php';
-include_once 'assets/models/artWorkType.php';
-include_once 'assets/models/user.php';
-include_once 'assets/controllers/woodSculptureCtrl.php';
+include_once 'configuration.php';
+include_once 'class/database.php';
+include_once 'models/user.php';
+include_once 'models/artWork.php';
+include_once 'models/artWorkImg.php';
+include_once 'models/artWorkType.php';
+include_once 'controllers/woodSculptureCtrl.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +26,7 @@ include_once 'assets/controllers/woodSculptureCtrl.php';
         <div class="container-fluid">
 
             <?php
-            foreach ($allListWoodArtWorks as $val => $allListWoodArtWork) {
+            foreach ($allListArtWorks as $val => $allListArtWork) {
                 if ($val % 2 == 0) {
                     ?>
             <div class="container"
@@ -38,9 +40,9 @@ include_once 'assets/controllers/woodSculptureCtrl.php';
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
-                            <img src="<?= $allListWoodArtWork->link ?>"/>
+                            <img src="<?= $allListArtWork->link ?>"/>
                             <figcaption>
-                                <h2><span><?= $allListWoodArtWork->name ?></span> <?= $allListWoodArtWork->description ?></h2>
+                                <h2><span><?= $allListArtWork->name ?></span> <?= $allListArtWork->description ?></h2>
                                 <p>
                                     <a href="#"><i class="fa fa-fw fa-heart"></i></a>
                                     <a href="#"><i class="fa fa-fw fa-share"></i></a>
@@ -49,7 +51,7 @@ include_once 'assets/controllers/woodSculptureCtrl.php';
                             </figcaption> 
                         </figure>
                     </div>
-                <?php if ($val % 2 == 2) { ?>
+                <?php if ($val % 2 == 1) { ?>
                     </div>
         </div>
                     <?php
