@@ -133,7 +133,10 @@ h1, #text{
 .grid{
     position:relative;
     margin:0 auto;
-    padding:1em 0 4em;
+    padding-top: 0em;
+    padding-right: 0px;
+    padding-bottom: 0em;
+    padding-left: 0px;
     max-width:1000px;
     list-style:none;
     text-align:center
@@ -161,7 +164,7 @@ h1, #text{
 .grid figure figcaption{
     padding:2em;
     color:#fff;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     font-size:1.25em;
     -webkit-backface-visibility:hidden;
     backface-visibility:hidden
@@ -191,7 +194,8 @@ h1, #text{
     font-weight:800
 }
 .grid figure h2, .grid figure p{
-    margin:0
+    margin:10px;
+    
 }
 .grid figure p{
     letter-spacing:1px;
@@ -238,12 +242,15 @@ figure.effect-terry img,figure.effect-terry p a{
 figure.effect-terry img{
     opacity:.85
 }
+h2{
+    font-size: 27px;
+}
 figure.effect-terry h2{
     position:absolute;
     bottom:0;
     left:0;
     padding:.4em 10px;
-    width:50%;
+    
     -webkit-transition:-webkit-transform .35s;
     transition:transform .35s;
     -webkit-transform:translate3d(100%,0,0);
@@ -374,5 +381,8 @@ img{
     color: green;
 }
 .size{
+    font-size: 20px;
+}
+#infos, .civil{
     font-size: 20px;
 }

@@ -28,35 +28,33 @@ include_once 'controllers/stoneSculptureCtrl.php';
             foreach ($allListArtWorks as $val => $allListArtWork) {
                 if ($val % 2 == 0) {
                     ?>
-                    <div class="container">
-
-                        <div class="row artwork">
-                        <?php } ?>
-                        <div class="grid">
-                            <figure class="effect-terry">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <img src="<?= $allListArtWork->link ?>"/>
-                                <figcaption>
-                                    <h2><span><?= $allListArtWork->name ?></span> <?= $allListArtWork->description ?></h2>
-                                    <p>
-                                        <a href="#"><i class="fa fa-fw fa-heart"></i></a>
-                                        <a href="#"><i class="fa fa-fw fa-share"></i></a>
-                                        <a href="#"><i class="fa fa-fw fa-tags"></i></a>
-                                    </p>
-                                </figcaption> 
-                            </figure>
-                        </div>
-                        <?php if ($val % 2 == 1) { ?>
-                        </div>
+                    <div class="row artwork">
+                    <?php } ?>
+                    <div class="grid">
+                        <figure class="effect-terry">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <img src="<?= $allListArtWork->link ?>"/>
+                            <figcaption>
+                                <h2><span><?= $allListArtWork->name ?></span> <?= $allListArtWork->description ?></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-fw fa-heart"></i></a>
+                                    <a href="#"><i class="fa fa-fw fa-share"></i></a>
+                                    <a href="#"><i class="fa fa-fw fa-tags"></i></a>
+                                </p>
+                            </figcaption> 
+                        </figure>
                     </div>
-                    <?php
-                }
+                    <?php if ($val % 2 == 1) { ?>
+                    </div>
+                </div>
+                <?php
             }
-            ?>
+        }
+        ?>
     </body>
     <footer>
         <section class="copyright-section">

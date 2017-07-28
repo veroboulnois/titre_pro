@@ -16,12 +16,16 @@ session_start();
     </head>
     <body>
         <?php include 'header.php'; ?>
-        <h2>VOS INFORMATIONS</h2>
-        <h3><?= $_SESSION['lastName'] ?></h3>
-        <h3><?= $_SESSION['firstName'] ?></h3>
-        <h3><?= $_SESSION['mail'] ?></h3>
-        <a class="link" href="/mail">Modifier mon email</a>
-        <a class="link" href="/pass">Modifier mon mot de passe</a>
+        <div class="container">
+                <div class="col-lg-12">
+                    <h2 id="infos">VOS INFORMATIONS</h2>
+                    <h3 class="civil"><?= $_SESSION['lastName'] ?></h3>
+                    <h3 class="civil"><?= $_SESSION['firstName'] ?></h3>
+                    <h3 class="civil"><?= $_SESSION['mail'] ?></h3>
+                    <a class="link" href="/mail">Modifier mon email</a>
+                    <a class="link" href="/pass">Modifier mon mot de passe</a>
+                </div>
+            </div>
     </body>
     <footer>
         <section class="copyright-section">

@@ -129,7 +129,6 @@
                 <li class="menu"><a href="/bois">Sculpture Bois</a></li>
                 <li class="menu"><a href="/peintures">Peinture</a></li>
                 <li class="menu"><a href="/contact">Contact</a></li>
-
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if (!empty($_SESSION)) { ?>

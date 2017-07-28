@@ -21,17 +21,14 @@ include_once 'controllers/paintingCtrl.php';
         <title>Peinture</title>
     </head>
     <body>
-       <?php include 'header.php'; ?>
+        <?php include 'header.php'; ?>
         <div class="container-fluid">
-
             <?php
             foreach ($allListArtWorks as $val => $allListArtWork) {
                 if ($val % 2 == 0) {
                     ?>
-            <div class="container"
-               
                     <div class="row artwork">
-    <?php } ?>
+                    <?php } ?>
                     <div class="grid">
                         <figure class="effect-terry">
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -50,13 +47,13 @@ include_once 'controllers/paintingCtrl.php';
                             </figcaption> 
                         </figure>
                     </div>
-                <?php if ($val % 2 == 1) { ?>
+                    <?php if ($val % 2 == 1) { ?>
                     </div>
-        </div>
-                    <?php
-                }
+                </div>
+                <?php
             }
-            ?>
+        }
+        ?>
     </body>
     <footer>
         <section class="copyright-section">
@@ -73,7 +70,6 @@ include_once 'controllers/paintingCtrl.php';
                                 <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-
                         <div class="copyright">
                             <p>Copyright &copy; 2017. Véronique Boulnois.</p>
                         </div>
