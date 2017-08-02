@@ -26,7 +26,7 @@ include_once 'controllers/picturesCtrl.php';
         <div class="container" id="workArt">
             <form action="pictures.php" method="POST" class="form-inline">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
                         <h4>Veuillez choisir votre espace oeuvre :</h4>
                     </div>
                     <div class="col-lg-3 form-group">
@@ -48,30 +48,30 @@ include_once 'controllers/picturesCtrl.php';
                 </div>
                 <button type="submit" name="add_artwork" class="btn btn-default">Envoyer</button>
             </form>
-            </ul>
-        </div>
-    </body>
-    <footer>
-        <section class="copyright-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="logo">
-                            <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
-                        </div>
-                        <div class="social-media">
-                            <ul class="list-inline">
-                                <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="copyright">
-                            <p>Copyright &copy; 2017. Véronique Boulnois.</p>
-                        </div>
+        </ul>
+    </div>
+</body>
+<footer>
+    <section class="copyright-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+                    <div class="logo">
+                        <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
+                    </div>
+                    <div class="social-media">
+                        <ul class="list-inline">
+                            <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright &copy; 2017. Véronique Boulnois.</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </footer>
+        </div>
+    </section>
+</footer>
 </html>

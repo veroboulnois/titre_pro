@@ -7,7 +7,3 @@ define('HOST','localhost');
 define('LOGIN','vero');
 define('PWD','220971');
 define('DB','art');
-
-
-//define('LANG_FOLDER', 'lang/');
-

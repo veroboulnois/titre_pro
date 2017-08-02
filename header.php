@@ -140,14 +140,14 @@
                             <li><a  href="/oeuvres" title="Mes oeuvres">Mes oeuvres</a></li>
                             <li><a  href="/favo" title="Mes favoris">Mes favoris</a></li>
                             <li><a  href="/like" title="Mes votes">Mes votes</a></li>
-                            <li><a  href="/divers" title="Divers">Divers</a></li>
+                            <li><a  href="/divers" title="Mes votes reçus">Mes votes reçus</a></li>
                             <li><a href="../index.php?disconnect" title="Déconnexion" >Déconnexion</a></li>
                         </ul>
                     </li>
                 <?php } else { ?>
                     <li><a href="#modalInscription" data-toggle="modal" data-target="#modalInscription" title="Inscription"><span class="glyphicon glyphicon-user"></span> Inscription </a></li>
                     <li><a href="#modalConnexion" data-toggle="modal" data-target="#modalConnexion" title="Connexion"><span class="glyphicon glyphicon-log-in"></span> Connexion </a></li>
-                <?php } ?>
+                    <?php } ?>
             </ul>
         </div>
     </nav>

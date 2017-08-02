@@ -19,7 +19,7 @@ include_once 'controllers/woodSculptureCtrl.php';
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>      
         <script src="https://use.fontawesome.com/a85a823305.js"></script>
         <script src="assets/js/script.js" type="text/javascript"></script>
-        <title>Sculpture Pierre</title>
+        <title>Sculpture Bois</title>
     </head>
     <body>
         <?php include 'header.php'; ?>
@@ -50,17 +50,17 @@ include_once 'controllers/woodSculptureCtrl.php';
                     </div>
                     <?php if ($val % 2 == 1) { ?>
                     </div>
-                </div>
-                <?php
+                    <?php
+                }
             }
-        }
-        ?>
+            ?>
+        </div>
     </body>
     <footer>
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
                         <div class="logo">
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                         </div>

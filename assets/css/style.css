@@ -195,7 +195,7 @@ h1, #text{
 }
 .grid figure h2, .grid figure p{
     margin:10px;
-    
+
 }
 .grid figure p{
     letter-spacing:1px;
@@ -250,7 +250,7 @@ figure.effect-terry h2{
     bottom:0;
     left:0;
     padding:.4em 10px;
-    
+
     -webkit-transition:-webkit-transform .35s;
     transition:transform .35s;
     -webkit-transform:translate3d(100%,0,0);

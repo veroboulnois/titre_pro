@@ -22,7 +22,7 @@ include_once 'controllers/indexCtrl.php';
     </head>
     <body>
         <?php include 'header.php'; ?>
-        <div class="slideshow-container">
+        <div class="slideshow-container hidden-xs">
             <div class="mySlides fade">
                 <img src="assets/img/atelier.jpg" style="width: 100%; height: 600px">
             </div>
@@ -42,7 +42,7 @@ include_once 'controllers/indexCtrl.php';
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
-        <div style="text-align:center">
+        <div class="text-center hidden-xs">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
             <span class="dot" onclick="currentSlide(3)"></span> 
@@ -71,7 +71,7 @@ include_once 'controllers/indexCtrl.php';
     <section class="copyright-section">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
                     <div class="logo">
                         <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                     </div>

@@ -21,7 +21,7 @@ include_once 'controllers/aboutCtrl.php';
         <?php include 'header.php'; ?>
         <div class="container" id="resum">
             <div class="row">
-                <div class="col-lg-12"
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
                      <p>Petit-fils d'un tailleur de pierre et maçon de métier, j'ai toujours eu un rapport particulier à cette matière. Là, encore c'est ma rencontre avec un jeune sculpteur,<br>
                         élève de Serge Damiens, qui m'amènera à me lancer.<br>
                         Pendant sept ans, ce dernier, m'a appris toutes les techniques dont j'avais besoin. Car, on ne rajoute pas à la pierre.<br>
@@ -32,7 +32,7 @@ include_once 'controllers/aboutCtrl.php';
                         Utilisée depuis des millénaires, j'aime l'idée de reproduire les gestes des sculpteurs, il y a des centaines d'années.<br>
                         Passionné et avec l'envie de partager, je vous propose ce réseau social, chaque artiste peut s'inscrire et déposer les photos de ses oeuvres.<br>
                         Les visiteurs du site pourront quand à eux noter les oeuvres sous forme d'étoiles.</p>
-                     <p>Michel BOULNOIS</p>
+                    <p>Michel BOULNOIS</p>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@ include_once 'controllers/aboutCtrl.php';
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
                         <div class="logo">
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                         </div>

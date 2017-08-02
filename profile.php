@@ -25,26 +25,26 @@ include_once 'controllers/profileCtrl.php';
         <div class="jumbotron">
             <div class="container" id="block">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-offset-0 col-lg-3 carre2">
+                    <div class="col-xs-4 col-sm-4 col-md-9 col-lg-offset-0 col-lg-3 carre2">
                         <p><a class="link" href="/informations.php">Mes coordonnées</a></p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 col-lg-offset-1 carre2">
                         <p><a class="link" href="/photo">Ajouter mes oeuvres</a></p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-offset-1 col-lg-3 col-lg-offset-1 carre2">
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 col-lg-offset-1 carre2">
                         <p><a class="link" href="/oeuvres">Mes oeuvres</a></p>
                     </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-3 carre2">
+                    <div class="col-xs-4 col-sm-9 col-md-9 col-lg-3 carre2">
                         <p><a class="link" href="/favo">Mes favoris</a></p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
                         <p><a class="link" href="/like">Mes votes</a></p>
                     </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
-                        <p><a class="link" href="/divers">Divers</a></p>
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1 carre2">
+                        <p><a class="link" href="/divers">Mes votes reçus</a></p>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ include_once 'controllers/profileCtrl.php';
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
                         <div class="logo">
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                         </div>

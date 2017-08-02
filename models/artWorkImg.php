@@ -1,5 +1,7 @@
 <?php
+
 class artWorkImg extends database {
+
     /**
      * Création des attributs
      */
@@ -10,8 +12,8 @@ class artWorkImg extends database {
     public $id_tp_users = 0;
     public $link = '';
     protected $pdo;
-    
-     /**
+
+    /**
      * Déclaration de la méthode magique construct.
      * Le constructeur de la classe est appelé avec le mot clé new.
      */
@@ -19,6 +21,7 @@ class artWorkImg extends database {
         parent::__construct();
         $this->connectDB();
     }
+
     /**
      * Fonction permettant l'ajout d'une photo d'une oeuvre
      */
@@ -31,21 +34,13 @@ class artWorkImg extends database {
         $queryPrepare->bindValue(':id_tp_artWorks', $this->id_tp_artWorks, PDO::PARAM_INT);
         return $queryPrepare->execute();
     }
+
     public function showImg() {
         $select = 'SELECT `name`,`link`,`id_tp_artWorks`,`id_tp_users` FROM `tp_artWorkImg` WHERE `id_tp_artWorks`= :id_tp_artWorks';
         $queryPrepare = $this->pdo->prepare($select);
-        $queryPrepare->bindValue(':id_tp_artWorks', $this->id_tp_artWorks,PDO::PARAM_INT);
+        $queryPrepare->bindValue(':id_tp_artWorks', $this->id_tp_artWorks, PDO::PARAM_INT);
         $queryPrepare->execute();
         return $queryPrepare->fetchAll(PDO::FETCH_OBJ);
-}
-/**
-     * Methode permettant de supprimer une photo
-     * @return boolean
-     */
-    /*public function deleteImg() {
-        $query = 'DELETE FROM `tp_artWorkImg` WHERE `id_tp_users` = :id_tp_users AND `id_tp_artWorks` = :id_tp_artWorks ';
-        $queryResult = $this->pdo->prepare($query);
-        $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
-        return $queryResult->execute();
-    }*/
+    }
+
 }

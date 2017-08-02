@@ -1,7 +1,6 @@
 <?php
 
 class user extends database {
-
     /**
      * Création des attributs
      */
@@ -12,7 +11,6 @@ class user extends database {
     public $pwd = '';
     public $id_tp_userGroup = 1;
     protected $pdo;
-
     /**
      * Déclaration de la méthode magique construct.
      * Le constructeur de la classe est appelé avec le mot clé new.
@@ -21,7 +19,6 @@ class user extends database {
         parent::__construct();
         $this->connectDB();
     }
-
     /**
      * Fonction permettant l'ajout d'un utilisateur
      */
@@ -35,27 +32,28 @@ class user extends database {
         $queryPrepare->bindValue(':id_tp_userGroup', $this->id_tp_userGroup, PDO::PARAM_STR);
         return $queryPrepare->execute();
     }
-
     /**
      * Fonction permettant de récupérer les informations d'un utilisateur
      */
     public function getUser() {
-        $select = 'SELECT `id`, `lastName`,`firstName`,`mail`,`id_tp_userGroup` FROM `tp_users` WHERE `mail`=:mail';
+        $select = 'SELECT `id`, `lastName`,`firstName`,`mail`,`id_tp_userGroup` FROM `tp_users` WHERE `mail`=:mail OR `id` =:id';
         $queryPrepare = $this->pdo->prepare($select);
+        $queryPrepare->bindValue(':id', $this->id, PDO::PARAM_INT);
         $queryPrepare->bindValue(':mail', $this->mail, PDO::PARAM_STR);
         $queryPrepare->execute();
         $getUser = $queryPrepare->fetch(PDO::FETCH_OBJ);
         $this->id = $getUser->id;
+        $this->mail = $getUser->mail;
         $this->lastName = $getUser->lastName;
         $this->firstName = $getUser->firstName;
         $this->id_tp_userGroup = $getUser->id_tp_userGroup;
     }
-
     /**
      * Fonction permettant de récupérer le mot de passe en crypté en fonction du mail si correct
      */
     public function getHashByUser() {
         $isOk = false;
+    /*:mail marqueur nominatif*/
         $select = 'SELECT `pwd` FROM `tp_users` WHERE `mail`=:mail';
         $queryPrepare = $this->pdo->prepare($select);
         $queryPrepare->bindValue(':mail', $this->mail, PDO::PARAM_STR);
@@ -75,7 +73,6 @@ class user extends database {
         //Si elle est à true, toutes les conditions sont remplies est on pourra éxécuter la suite
         return $isOk;
     }
-
     /**
      * Fonction permettant de compter le nombre de personnes ayant le login donné
      * Retourne le nombre de lignes trouvées
@@ -91,7 +88,6 @@ class user extends database {
         $result = $queryPrepare->fetch(PDO::FETCH_OBJ);
         return $result->exists;
     }
-
     /*
      * fonction qui permet de modifier l'adresse mail d'un utilisateur
      */
@@ -101,12 +97,7 @@ class user extends database {
         $queryPrepare = $this->pdo->prepare($update);
         $queryPrepare->bindValue(':mail', $this->mail, PDO::PARAM_STR);
         $queryPrepare->bindValue(':userId', $this->id, PDO::PARAM_STR);
-        if ($queryPrepare->execute()) {
-            $editMail = $queryPrepare->fetch(PDO::FETCH_OBJ);
-            if (is_object($editMail)) {
-                $this->mail = $editMail->mail;
-            }
-        }
+        return $queryPrepare->execute();
     }
     /*
      * fonction qui permet de modifier le mot de passe d'un utilisateur
@@ -116,11 +107,6 @@ class user extends database {
         $queryPrepare = $this->pdo->prepare($update);
         $queryPrepare->bindValue(':pwd', $this->pwd, PDO::PARAM_STR);
         $queryPrepare->bindValue(':userId', $this->id, PDO::PARAM_STR);
-        if ($queryPrepare->execute()) {
-            $editPwd = $queryPrepare->fetch(PDO::FETCH_OBJ);
-            if (is_object($editPwd)) {
-                $this->pwd = $editPwd->pwd;
-            }
-        }
+        return $queryPrepare->execute();
     }
 }

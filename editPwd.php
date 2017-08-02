@@ -39,7 +39,7 @@ include_once 'controllers/editPwdCtrl.php';
         <section class="copyright-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
                         <div class="logo">
                             <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
                         </div>
