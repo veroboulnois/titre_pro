@@ -7,7 +7,7 @@ $(function () {
          * _Les actions à effectuer avec le retour du PHP
          * _Le format de donnée utilisé en retour de PHP
          **/
-        $.post('controllers/indexCtrl.php',
+        $.post('../../controllers/indexCtrl.php',
                 {
                     verifmail: $('#mail').val() //le $_POST['verifLogin'] prend le contenu de l'input
                 },

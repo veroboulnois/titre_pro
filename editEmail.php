@@ -20,18 +20,20 @@ include_once 'controllers/editEmailCtrl.php';
     <body>
         <?php include 'header.php'; ?>
         <form action="/editEmail.php" method="POST">
-            <div class="form-group">
-                <h1 class="size" class="text-center" id="successMessage"><?= $successMessage ?></h1>
-                <label for="email">Nouveau email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Nouvel email" name="editMail">
+            <div class="mail">
+                <div class="form-group">
+                    <h1 class="size" class="text-center" id="successMessage"><?= $successMessage ?></h1>
+                    <label for="email">Nouveau email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Nouvel email" name="editMail">
+                </div>
+                <div class="form-group">
+                    <label for="email">Confirmez la nouvelle adresse email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Confirmez la nouvelle adresse email" name="confirmMail">
+                    <span id="errorMessage"><?= $errorMessage ?></span>
+                </div>     
+                <button type="button" class="btn btn-primary">Annuler</button>
+                <button type="submit" name="newMail" class="btn btn-success">Modifier</button>
             </div>
-            <div class="form-group">
-                <label for="email">Confirmez la nouvelle adresse email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Confirmez la nouvelle adresse email" name="confirmMail">
-                <span id="errorMessage"><?= $errorMessage ?></span>
-            </div>     
-            <button type="button" class="btn btn-primary">Annuler</button>
-            <button type="submit" name="newMail" class="btn btn-success">Modifier</button>
         </form>
     </body>
     <!--Footer-->

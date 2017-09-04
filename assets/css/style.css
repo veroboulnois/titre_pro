@@ -386,3 +386,9 @@ img{
 #infos, .civil{
     font-size: 20px;
 }
+/*forms*/
+.mail, .pwd, .contacts, #informations{
+    max-width: 600px;
+    margin:3em 6em 3em 6em;
+    width:100%;
+}

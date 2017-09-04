@@ -20,18 +20,20 @@ include_once 'controllers/editPwdCtrl.php';
     <body>
         <?php include 'header.php'; ?>
         <form action="/editPwd.php" method="POST">
-            <div class="form-group">
-                <h1 class="size" class="text-center" id="successMessage"><?= $successMessage ?></h1>
-                <label for="password">Nouveau mot de passe:</label>
-                <input type="password" class="form-control" id="password" placeholder="Nouveau mot de passe" name="editPwd">
-            </div>
-            <div class="form-group">
-                <label for="password">Confirmez le nouveau mot de passe":</label>
-                <input type="password" class="form-control" id="password" placeholder="Confirmez le nouveau mot de passe" name="confirmPwd">
-                <span id="errorMessage"><?= $errorMessage ?></span>
-            </div>     
-            <button type="button" class="btn btn-primary">Annuler</button>
-            <button type="submit" name="newPwd" class="btn btn-success">Modifier</button>
+            <div class="pwd">
+                <div class="form-group">
+                    <h1 class="size" class="text-center" id="successMessage"><?= $successMessage ?></h1>
+                    <label for="password">Nouveau mot de passe:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Nouveau mot de passe" name="editPwd">
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirmez le nouveau mot de passe":</label>
+                    <input type="password" class="form-control" id="password" placeholder="Confirmez le nouveau mot de passe" name="confirmPwd">
+                    <span id="errorMessage"><?= $errorMessage ?></span>
+                </div>     
+                <button type="button" class="btn btn-primary">Annuler</button>
+                <button type="submit" name="newPwd" class="btn btn-success">Modifier</button>
+            </div>   
         </form>
     </body>
     <!--Footer-->

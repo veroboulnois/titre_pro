@@ -46,7 +46,9 @@ class artWork extends database {
      * Fonction permettant de récupérer toutes les oeuvres d'un utilisateur donné 
      */
     public function showArtWork() {
-        $select = 'SELECT `tp_artWorks`.`id`,`tp_artWorks`.`name`,`tp_artWorks`.`description`,`tp_artWorks`.`id_tp_artWorkType`,`tp_artWorks`.`id_tp_users`, `tp_users`.`lastName`,`tp_users`.`firstName` FROM `tp_artWorks` '
+        $select = 'SELECT `tp_artWorks`.`id`,`tp_artWorks`.`name`,`tp_artWorks`.`description`,'
+                . '`tp_artWorks`.`id_tp_artWorkType`,`tp_artWorks`.`id_tp_users`,'
+                . ' `tp_users`.`lastName`,`tp_users`.`firstName` FROM `tp_artWorks` '
                 . 'INNER JOIN `tp_users` ON `tp_artWorks`.`id_tp_users` = `tp_users`.`id` '
                 . 'WHERE `id_tp_users`=:id_tp_users';
         $queryPrepare = $this->pdo->prepare($select);
@@ -54,9 +56,14 @@ class artWork extends database {
         $queryPrepare->execute();
         return $queryPrepare->fetchAll(PDO::FETCH_OBJ);
     }
-
+    /**
+     * Fonction permettant de récupérer toutes les oeuvres des utilisateurs pour les afficher dans le carousel 
+     */
     public function showAllArtWork() {
-        $select = 'SELECT `tp_artWorks`.`id`,`tp_artWorks`.`name`,`tp_artWorks`.`description`,`tp_artWorks`.`id_tp_artWorkType`,`tp_artWorks`.`id_tp_users`, `tp_users`.`lastName`,`tp_users`.`firstName`, `tp_artWorkImg`.`link`, `tp_artWorkImg`.`name` AS `imgName`'
+        $select = 'SELECT `tp_artWorks`.`id`,`tp_artWorks`.`name`,`tp_artWorks`.`description`,`tp_artWorks`.'
+                . '`id_tp_artWorkType`,`tp_artWorks`.`id_tp_users`, '
+                . '`tp_users`.`lastName`,`tp_users`.`firstName`, '
+                . '`tp_artWorkImg`.`link`, `tp_artWorkImg`.`name` AS `imgName`'
                 . ' FROM `tp_artWorks` '
                 . 'INNER JOIN `tp_users` '
                 . 'ON `tp_artWorks`.`id_tp_users` = `tp_users`.`id` '

@@ -3,9 +3,9 @@
 //Si on lance l'appel AJAX
 if (isset($_POST['verifmail'])) {
     //on inclut le modèle car on n'appelle pas la page index.php
-    include_once 'configuration.php';
-    include_once 'class/database.php';
-    include_once 'models/user.php';
+    include_once '../configuration.php';
+    include_once '../class/database.php';
+    include_once '../models/user.php';
     //On instancie la classe user
     $user = new user();
     //on pass à l'attribut login ce que l'AJAX à mis en POST
@@ -15,7 +15,6 @@ if (isset($_POST['verifmail'])) {
     //Avec le echo on passe à data dans l'appel AJAX le JSON
     echo json_encode(array('response' => $result));
 } else { //On est dans un cas sans AJAX
-}
 //Instanciation de l'objet user
 $user = new user();
 if (isset($_GET['disconnect'])) {
@@ -117,4 +116,4 @@ if (isset($_POST ['artWork_type'])AND isset($_POST['artWork_name'])AND isset($_P
     $artWork->id_tp_users = $_SESSION['id'];
     $artWork->addArtWork();
 }
-    
+}  
