@@ -19,55 +19,57 @@ include_once 'controllers/contactCtrl.php';
     </head>
     <body>
         <?php include 'header.php'; ?>
-        <div class="jumbotron">
-            <div class="container">
-                <form method="post" action="envoi.php">
-                    <form>
-                        <div class="contacts">
-                            <div class="form-group">
-                                <label for="nom">Nom</label>
-                                <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="prenom">Prénom</label>
-                                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom"required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Entrez votre email"required>
-                            </div>
-                            <div class="form-group">
-                                <p><em><label for="Message">Votre message</label><br /><textarea name="message" id="message" required></textarea></em></p>
-                            </div>
-                            <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
-                    </form> 
-            </div>
-        </div>
-    </div> 
-</body>
-<!-- footer-->
-<footer>
-    <section class="copyright-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
-                    <div class="logo">
-                        <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
-                    </div>
-                    <div class="social-media">
-                        <ul class="list-inline">
-                            <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">
-                        <p>Copyright &copy; 2017. Véronique Boulnois.</p>
-                    </div>
+        <div class="container" id="contact">
+            <div class="col-md-5">
+                <div class="form-area">  
+                    <form role="form">
+                        <br style="clear:both">
+                        <h3 style="margin-bottom: 25px; text-align: center;">Contact</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Téléphone" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>                    
+                        </div>
+
+                        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Envoyer</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-</footer>
+    </body>
+    <!-- footer-->
+    <footer>
+        <section class="copyright-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+                        <div class="logo">
+                            <h2 class="demo-logo">ART'S<strong>BO</strong>OK</h2>
+                        </div>
+                        <div class="social-media">
+                            <ul class="list-inline">
+                                <li><a href="#" title="A partager sur Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" title="A partager sur Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" title="A partager sur Google+"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="copyright">
+                            <p>Copyright &copy; 2017. Véronique Boulnois.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
 </html>
 

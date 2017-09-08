@@ -28,8 +28,7 @@ class artWork extends database {
         $insert = 'INSERT INTO `tp_artWorks`(`name`,`description`,`id_tp_artWorkType`,`id_tp_users`) '
                 . 'VALUES(:name,:description,:id_tp_artWorkType,:id_tp_users)';
         /* une fois connectée à la base de données */
-        /* je demande que la fonction query se charge d'exécuter */
-        /* et me retourne les valeurs sous forme de tableau d'objet */
+        /* je demande que la fonction prepare se charge d'exécuter */
         $queryPrepare = $this->pdo->prepare($insert);
         $queryPrepare->bindValue(':name', $this->name, PDO::PARAM_STR);
         $queryPrepare->bindValue(':description', $this->description, PDO::PARAM_STR);

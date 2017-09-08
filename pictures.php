@@ -27,7 +27,7 @@ include_once 'controllers/picturesCtrl.php';
             <form action="pictures.php" method="POST" class="form-inline">
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 col-md-6 col-xs-12">
-                        <h4>Veuillez choisir votre espace oeuvre :</h4>
+                        <h4>Veuillez choisir votre espace oeuvre</h4>
                     </div>
                     <div class="col-lg-3 form-group">
                         <select name="artWork_type" class="form-control">
@@ -37,13 +37,13 @@ include_once 'controllers/picturesCtrl.php';
                         </select>
                     </div>
                 </div>
-                <h4>Nouvelle oeuvre à ajouter :</h4>
+                <h4>Nouvelle oeuvre à ajouter</h4>
                 <div class="form-group">
-                    <label for="name">Nom de la photo:</label>
+                    <label for="name">Nom de la photo</label>
                     <input type="text" class="form-control" id="name" placeholder="Nom" name="name">
                 </div>
                 <div class="form-group">
-                    <label for="description">Description:</label>
+                    <label for="description">Description</label>
                     <input type="text" class="form-control" id="description" placeholder="Description de l'oeuvre" name="description">
                 </div>
                 <button type="submit" name="add_artwork" class="btn btn-default">Envoyer</button>

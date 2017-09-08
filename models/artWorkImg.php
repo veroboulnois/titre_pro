@@ -34,7 +34,9 @@ class artWorkImg extends database {
         $queryPrepare->bindValue(':id_tp_artWorks', $this->id_tp_artWorks, PDO::PARAM_INT);
         return $queryPrepare->execute();
     }
-
+    /**
+     * Fonction permettant d'afficher les photos d'une oeuvre
+     */
     public function showImg() {
         $select = 'SELECT `name`,`link`,`id_tp_artWorks`,`id_tp_users` FROM `tp_artWorkImg` WHERE `id_tp_artWorks`= :id_tp_artWorks';
         $queryPrepare = $this->pdo->prepare($select);

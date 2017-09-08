@@ -17,7 +17,7 @@
                         <form action="index.php" method="POST">
                             <!--creation des champs du formulaire avec position du texte a droite-->
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="userGroup">Catégorie :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="lastName">Nom :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="firstName">Prénom :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="mail">E-mail :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -55,7 +55,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="pwd">Mot de passe :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="confirmPassword">Confirmation du mot de passe :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -92,7 +92,7 @@
                     <div class="row">
                         <form method="POST" action="#"><!--creation des champs du formulaire avec position du texte a droite-->
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="mail">E-mail :</label>
                                 </div>
                                 <div class="col-lg-4">
@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-offset-1 col-lg-3 text-right">
+                                <div class="col-lg-offset-1 col-lg-3 col-xs-4 text-right">
                                     <label for="password">Mot de passe :</label>
                                 </div>
                                 <div class="col-lg-4">

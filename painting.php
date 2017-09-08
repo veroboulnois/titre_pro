@@ -24,6 +24,8 @@ include_once 'controllers/paintingCtrl.php';
         <?php include 'header.php'; ?>
         <div class="container-fluid">
             <?php
+            //boucle qui sert à à afficher toutes mes oeuvres. 
+            //La condition sert à mettre 2 oeuvres par ligne.
             foreach ($allListArtWorks as $val => $allListArtWork) {
                 if ($val % 2 == 0) {
                     ?>
